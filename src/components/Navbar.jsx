@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Menu, Typography, Avatar } from "antd";
+import { Button, Space,Menu, Typography, Avatar } from "antd";
 import { Link } from "react-router-dom";
 import { HomeOutlined,MoneyCollectOutlined,BulbOutlined,FundOutlined,MenuOutlined} from "@ant-design/icons";
 import icon from "../img/cryptocurrency.png";
@@ -9,10 +9,12 @@ const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
+      <Space>
         <Avatar size="large" src={icon}></Avatar>
         <Title level={2} className="logo">
           <Link to="/">Cryptoverse</Link>
         </Title>
+        </Space>
       </div>
 
 
