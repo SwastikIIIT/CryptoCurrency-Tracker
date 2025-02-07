@@ -6,13 +6,12 @@ import { Link } from 'react-router-dom';
 import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetails from './CryptoDetails';
 import News from './News';
+import { useGetMainCryptosQuery  } from '../services/cryptoMainApi';
 
 const { Title } = Typography;
 
 const Homepage = () => {
   const { data,error,isLoading } = useGetCryptosQuery();
-  console.log(data);
-
   const globalStats = data?.data?.stats;
   if(isLoading)return <h1>Loading........</h1>
 

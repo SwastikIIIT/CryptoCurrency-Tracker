@@ -135,7 +135,7 @@ a:hover{
         font-size: 1.3rem !important;
     }
 }
-
+*/
 .coin-detail-container{
     margin: 30px;
 }
@@ -207,7 +207,7 @@ a:hover{
     opacity: 0.9;
 }
 
-.coin-desc-link{
+ .coin-desc-link{
     display: flex;
     gap: 40px;
     margin-top: 40px;
@@ -341,9 +341,9 @@ width: 70%;
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
-}
-*/
-.home-heading-container{
+} */
+
+ .home-heading-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -352,12 +352,12 @@ width: 70%;
     
 .show-more{
     margin-top: 0px !important;
-}
-/*
+} 
+
 .exchange-image{
     margin: 0px 10px !important;
 }
-    */
+
 .search-crypto{
     margin: 20px auto 30px auto;
     width: 250px;
