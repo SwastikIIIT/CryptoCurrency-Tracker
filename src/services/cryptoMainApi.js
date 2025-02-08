@@ -18,7 +18,10 @@ const createRequest = (url) => ({url,headers: cryptoMainHeaders});
           getAdditionalCryptos: builder.query({
             query: (coinID) => createRequest(`/coins/markets?vs_currency=usd&ids=${coinID}`),
           }),
+          getPriceHistory:builder.query({
+            query: (coinID,days) => createRequest(`/coins/${coinID}/market_chart?vs_currency=usd&days=9&interval=daily`),
+          }),
         }),
       });
 
-export const {useGetMainCryptosQuery ,useGetAdditionalCryptosQuery}=cryptoMainApi;
+export const {useGetMainCryptosQuery ,useGetAdditionalCryptosQuery,useGetPriceHistoryQuery}=cryptoMainApi;

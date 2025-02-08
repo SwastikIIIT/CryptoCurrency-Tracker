@@ -7,13 +7,14 @@ import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetails from './CryptoDetails';
 import News from './News';
 import { useGetMainCryptosQuery  } from '../services/cryptoMainApi';
+import Loader from './Loader';
 
 const { Title } = Typography;
 
 const Homepage = () => {
   const { data,error,isLoading } = useGetCryptosQuery();
   const globalStats = data?.data?.stats;
-  if(isLoading)return <h1>Loading........</h1>
+  if(isLoading)return <Loader></Loader>
 
   return (
     <>
@@ -32,7 +33,7 @@ const Homepage = () => {
       <Cryptocurrencies simplified/>
       <div className='home-heading-container'>
         <Title level={2} className='home-title'>Latest Crypto News</Title>
-        <Title level={3} className='show-more'><Link to="/cryptocurrency">Show More</Link></Title>
+        <Title level={3} className='show-more'><Link to="/news">Show More</Link></Title>
       </div>
       <News simplified/>
     </>

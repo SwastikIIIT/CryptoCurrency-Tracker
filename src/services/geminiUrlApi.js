@@ -1,12 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
 
-export const geminiApi = createApi({
-    reducerPath: "geminiApi",
+export const geminiUrlApi = createApi({
+    reducerPath: "geminiUrlApi",
     baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
     endpoints: (builder) => ({
-        getCryptoInfo: builder.query({
+        getUrlInfo: builder.query({
           query: (prompt) => ({
             url: `/models/gemini-1.5-flash:generateContent?key=AIzaSyAr9Azi0PGIadM9oMAfuytqNw92gdSSfQo`,
             method: "POST",
@@ -18,7 +17,7 @@ export const geminiApi = createApi({
                 {
                   parts: [
                     {
-                      text: `Give information about ${prompt} cryptocurrency`,
+                      text: `Give links of ${prompt} cryptocurrency from different sources`,
                     },
                   ],
                 },
@@ -26,41 +25,59 @@ export const geminiApi = createApi({
           generationConfig: {
             responseMimeType: "application/json",
             responseSchema: {
-              description: `${prompt} Cryptocurrency Information`,
+              description: `${prompt} Cryptocurrency Links`,
               type: "OBJECT",
               properties: {
-                aboutCrypto: {
+                github: {
                   type: "STRING",
-                  description: `What is ${prompt} in 5 lines`,
+                  description: `single github link in 1 line`,
                   nullable: false,
                 },
-                ecosystem: {
+                reddit: {
                   type: "STRING",
-                  description: `Ecosystem of ${prompt} cryptocurrency A paragraph`,
+                  description: `single  reddit link in 1 line`,
                   nullable: false,
                 },
-                useCases: {
+                image: {
                   type: "STRING",
-                  description: `Use cases of ${prompt}. A paragraph`,
+                  description: `url to an google image of the cryptocurrency`,
                   nullable: false,
                 },
-                whobuilt: {
+                wiki: {
                   type: "STRING",
-                  description: `A paragraph on the team and development of ${prompt} cryptocurrency`,
+                  description: `single wikipedia link in one line`,
                   nullable: false,
                 },
-                technology: {
+                investopedia: {
                   type: "STRING",
-                  description: `The technology of ${prompt}. A paragraph`,
+                  description: `single investopedia link in one line`,
                   nullable: false,
+                },
+                youtube: {
+                    type: "STRING",
+                    description: `a youtube link for this cryptocurrency`,
+                    nullable: false,
+                  },
+                twitter: {
+                    type: "STRING",
+                    description: `a twitter link for this cryptocurrency`,
+                    nullable: false,
+                },
+                coindesk: {
+                    type: "STRING",
+                    description: `a coindesk link for this cryptocurrency`,
+                    nullable: false,
                 },
               },
               required: [
-                "aboutCrypto",
-                "ecosystem",
-                "useCases",
-                "whobuilt",
-                "technology",
+                "github",
+                "reddit",
+                "image",
+                "wiki",
+                "investopedia",
+                "youtube",
+                "twitter",
+                "coindesk"
               ],
             },
           },
@@ -78,5 +95,5 @@ export const geminiApi = createApi({
     }),
     }),
 });
-export const { useGetCryptoInfoQuery } = geminiApi;
+export const { useGetUrlInfoQuery } = geminiUrlApi;
 

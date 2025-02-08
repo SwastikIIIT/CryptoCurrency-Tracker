@@ -69,14 +69,14 @@ a:hover{
     background-color: var(--bgSecondary) !important;
     border: none !important;
 }
-
+*/
 .loader{
     height: 81vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/*
 @media screen and (max-width:1300px){
     .main{
         margin-left: 50px;
@@ -136,6 +136,7 @@ a:hover{
     }
 }
 */
+
 .coin-detail-container{
     margin: 30px;
 }
@@ -237,7 +238,7 @@ a:hover{
 }
 
 .coin-links{
-  padding: 0px 20px;
+  padding: 27px 20px;
     flex: 0.5;
 }
 
@@ -310,7 +311,7 @@ width: 70%;
 }
 .news-card p{
     color: black;
-    margin: 10px 0px !important;
+    margin: 34px 0px !important;
 }
 .provider-container{
     display: flex;
@@ -341,7 +342,7 @@ width: 70%;
 .current-price{
     margin-top: 0px !important;
     font-weight: 900 !important;
-} */
+} 
 
  .home-heading-container{
     display: flex;
@@ -373,12 +374,12 @@ width: 70%;
 .crypto-card .crypto-image{
     width:35px;
 } 
-/*
+
 .select-timeperiod{
     width: 200px !important;
     margin-top: 20px !important;
 }
-*/
+
 .footer {
     background-color: #001529;
     display: flex;
@@ -386,3 +387,8 @@ width: 70%;
     padding: 20px;
     align-items: center;
 } 
+
+.para{
+    margin-top: 5px;
+}
+
