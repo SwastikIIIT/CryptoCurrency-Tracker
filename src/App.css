@@ -53,13 +53,14 @@ a:hover{
     align-items: center;
     width: 100%;
 }
-/*
 .logo{
-    margin:0 0 0 15px;
+    margin:9px 0 0 15px;
 }
-.logo a{
+/* .logo a{
    color: white;
-}
+} */
+
+/*
 .menu-control-container{
     display: none !important;
     position: absolute !important;
@@ -76,10 +77,10 @@ a:hover{
     justify-content: center;
     align-items: center;
 }
-/*
-@media screen and (max-width:1300px){
+
+ @media screen and (max-width:1300px){
     .main{
-        margin-left: 50px;
+        margin-left: 0;
     }
 }
 
@@ -93,7 +94,8 @@ a:hover{
     .main{
         margin-left: 100px;
     }
-}
+} 
+
 
 @media screen and (max-width:800px){
     .app{
@@ -103,9 +105,9 @@ a:hover{
 
     .navbar{
         flex: 1;
-    } */
+    } 
 
-    /* .main{
+     .main{
         flex: 1;
         margin-top: 90px;
         margin-left: 0px;
@@ -135,7 +137,7 @@ a:hover{
         font-size: 1.3rem !important;
     }
 }
-*/
+
 
 .coin-detail-container{
     margin: 30px;
@@ -292,7 +294,8 @@ a:hover{
 }
 
 .select-news{
-    width: 180px;
+    margin: 20px auto 30px auto;
+    width: 260px;
 }
 .news-card{
     min-height: 300px !important;
@@ -392,3 +395,8 @@ width: 70%;
     margin-top: 5px;
 }
 
+.selectTab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

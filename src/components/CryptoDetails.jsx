@@ -53,7 +53,7 @@ const CryptoDetails = () => {
 
 //  console.log(links);
   console.log(yAxis);
-  if(isLoadingStats || isLoadingGemini || isLoadingUrl)return <Loader></Loader>
+  if( isLoadingGemini)return <Loader></Loader>
   return (
      <Col className='coin-detail-container'>
       <Col className='coin-heading-container'>
