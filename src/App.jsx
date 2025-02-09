@@ -4,6 +4,7 @@ import "./App.css";
 import { Layout, Typography, Space } from "antd";
 import { Routes, Route, Link } from "react-router";
 import Cryptocurrencies from "./components/Cryptocurrencies";
+import CurrencyConverter from "./components/CurrencyConverter";
 import CryptoDetails from "./components/CryptoDetails";
 import News from "./components/News";
 import Homepage from "./components/Homepage";
@@ -22,6 +23,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<Homepage />} />
               <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />}/>
+              <Route exact path="/converter" element={<CurrencyConverter />}/>
               <Route exact path="/crypto/:coinID" element={<CryptoDetails />} />
               <Route exact path="/news" element={<News />} />
             </Routes>

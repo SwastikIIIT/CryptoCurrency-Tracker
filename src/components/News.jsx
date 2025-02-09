@@ -28,9 +28,9 @@ const News = ({simplified}) => {
   const options = [...staticOptions, ...(dynamicOptions || [])];
 
   const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
-  console.log(news);
-  console.log("API Response:", data);
-  console.log("News Articles:", news);
+  // console.log(news);
+  // console.log("API Response:", data);
+  // console.log("News Articles:", news);
 
   if(isLoading)return <Loader/>
   return (
