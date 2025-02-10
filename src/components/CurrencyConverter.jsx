@@ -37,8 +37,8 @@ const CurrencyConverter = () => {
   }
 };
 
-console.log(fromCurrency);
-console.log(toCurrency);
+// console.log(fromCurrency);
+// console.log(toCurrency);
 
   return (
     <Layout className='layout'>
