@@ -8,6 +8,7 @@ import CurrencyConverter from "./components/CurrencyConverter";
 import CryptoDetails from "./components/CryptoDetails";
 import News from "./components/News";
 import Homepage from "./components/Homepage";
+import ChatBot from "./components/Chatbot";
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
           </div>
         </Layout>
 
+       <ChatBot/>
         <div className="footer">
           <Typography.Title level={5} style={{color:"white",textAlign:"center"}}>
            CryptoLens<br/>All rights reserved
