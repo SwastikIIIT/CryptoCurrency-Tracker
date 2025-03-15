@@ -12,7 +12,7 @@ const Navbar = () => {
       <Space >
         <Avatar size="large" shape="square" src={"/favicon.png"}></Avatar>
         <Title level={2} className="logo">
-          <Link to="/">CryptoLens</Link>
+          <Link to="/">CryptoLens it is</Link>
         </Title>
         </Space>
       </div>
