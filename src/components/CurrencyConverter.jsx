@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Layout, Select, Input, Button, Typography, Card, Spin, Divider } from "antd";
 import { SwapOutlined, TransactionOutlined } from '@ant-design/icons';
 import {useGetMainCryptosQuery} from "../services/cryptoMainApi";
@@ -13,7 +13,16 @@ const CurrencyConverter = () => {
    const [fromCurrency,setFromCurrency]=useState();
    const [toCurrency,setToCurrency]=useState("");
    const [convertedAmount,setConvertedAmount]=useState("");
-
+   const [isMobile, setIsMobile] = useState(false);
+   useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+  
    const {data,isLoading,error}=useGetMainCryptosQuery();
    console.log(data);
    const {data:convertData,isLoading:isLoadingConvert,error:errorConvert}=useGetFrom_ToQuery({fromCurrency, toCurrency},
@@ -42,12 +51,12 @@ const CurrencyConverter = () => {
 
 console.log(fromCurrency,toCurrency);
 const handleSwap = () => {
-  // Only swap if both currencies are selected
+
   if (fromCurrency && toCurrency) {
     const temp = fromCurrency;
     setFromCurrency(toCurrency);
     setToCurrency(temp);
-    // Clear the converted amount when swapping
+  
     setConvertedAmount("");
   }
 };
@@ -58,7 +67,7 @@ const handleSwap = () => {
     <Layout className='layout' style={{ minHeight: '100vh', background: '#f5f5f5' }}>
       <Content style={{ padding: "40px 20px" }}>
         <Card
-          className="converter-card"
+          className="converter-container"
           style={{
             maxWidth: '700px',
             margin: '0 auto',
@@ -92,8 +101,8 @@ const handleSwap = () => {
                 />
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '24px' }}>
-                <div style={{ flex: 1 }}>
+              <div className={`currency-fields-container ${isMobile ? 'mobile' : ''}`}>
+                <div className='currency-field'>
                   <Title level={4} style={{ marginBottom: '8px' }}>From</Title>
                   <Select
                     showSearch
@@ -113,19 +122,10 @@ const handleSwap = () => {
                   type="default"
                   icon={<SwapOutlined />}
                   onClick={handleSwap}
-                  style={{
-                    margin: '0 12px',
-                    marginTop: '32px',
-                    height: '40px',
-                    width: '40px',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
+                  className={`swap-button ${isMobile ? 'mobile' : ''}`}
                 />
 
-                <div style={{ flex: 1 }}>
+                <div className='currency-field'>
                   <Title level={4} style={{ marginBottom: '8px' }}>To</Title>
                   <Select
                     showSearch
