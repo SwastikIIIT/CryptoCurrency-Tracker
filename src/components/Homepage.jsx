@@ -14,6 +14,7 @@ const { Title } = Typography;
 const Homepage = () => {
   const { data,error,isLoading } = useGetCryptosQuery();
   const globalStats = data?.data?.stats;
+  
   if(isLoading)return <Loader></Loader>
 
   return (
