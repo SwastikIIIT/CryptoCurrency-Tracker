@@ -67,9 +67,9 @@
     <td align="center"><img src="https://www.chartjs.org/img/chartjs-logo.svg" width="60px"><br><b>Chart.js</b><br><small>Data Visualization</small></td>
   </tr>
   <tr>
-    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="60px"><br><b>Tailwind CSS</b><br><small>Styling</small></td>
+    <td align="center"><img src="https://w7.pngwing.com/pngs/293/485/png-transparent-tailwind-css-hd-logo.png" width="60px"><br><b>Tailwind CSS</b><br><small>Styling</small></td>
     <td align="center"><img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="60px"><br><b>Ant Design</b><br><small>UI Components</small></td>
-    <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Gemini_icon.svg" width="60px"><br><b>Gemini API</b><br><small>AI Assistant</small></td>
+    <td align="center"><img src="https://i.pinimg.com/736x/66/fd/54/66fd54d1991903fd2504324b321c26db.jpg" width="60px"><br><b>Gemini API</b><br><small>AI Assistant</small></td>
     <td align="center"><img src="https://static.coingecko.com/s/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png" width="60px"><br><b>CoinGecko API</b><br><small>Crypto Data</small></td>
   </tr>
 </table>
