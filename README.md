@@ -1,32 +1,78 @@
+<div align="center">
+
 # 🔍 CryptoLens
 
-A comprehensive cryptocurrency analytics platform built with React, providing detailed insights and real-time data for crypto enthusiasts and investors.
+### A comprehensive cryptocurrency analytics platform built with React, providing detailed insights and real-time data for crypto enthusiasts and investors.
 
-![CryptoLens Banner](/api/placeholder/1200/300)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chart-dot-js&logoColor=white)](https://www.chartjs.org/)
+[![Ant Design](https://img.shields.io/badge/Ant%20Design-1890FF?style=for-the-badge&logo=antdesign&logoColor=white)](https://ant.design/)
+
+</div>
 
 ## ✨ Features
 
-- **Real-time Cryptocurrency Stats**: Track current prices, market cap, volume, and other key metrics
-- **Detailed Crypto Profiles**: Access in-depth information about cryptocurrencies including founding teams, market impact, and social links
-- **Interactive Data Visualization**: Analyze market trends with Chart.js-powered interactive graphs
-- **Live News Feed**: Stay updated with the latest cryptocurrency news and developments
-- **AI-powered Chatbot**: Get instant customer support and information through our Gemini API-powered assistant
-- **Crypto-to-Fiat Converter**: Calculate precise exchange values between cryptocurrencies and traditional currencies
-- **Advanced Search & Filtering**: Find specific cryptocurrencies with powerful search and filtering capabilities
-- **Responsive Design**: Seamless experience on desktop, tablet, and mobile devices
+<table>
+  <tr>
+    <td width="50%">
+      <h3>⚡ Real-time Cryptocurrency Stats</h3>
+      <p>Track current prices, market cap, volume, and other key metrics</p>
+    </td>
+    <td width="50%">
+      <h3>🧠 Detailed Crypto Profiles</h3>
+      <p>Access in-depth information about cryptocurrencies including founding teams, market impact, and social links</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>📈 Interactive Data Visualization</h3>
+      <p>Analyze market trends with Chart.js-powered interactive graphs</p>
+    </td>
+    <td width="50%">
+      <h3>📰 Live News Feed</h3>
+      <p>Stay updated with the latest cryptocurrency news and developments</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🤖 AI-powered Chatbot</h3>
+      <p>Get instant customer support and information through our Gemini API-powered assistant</p>
+    </td>
+    <td width="50%">
+      <h3>💱 Crypto-to-Fiat Converter</h3>
+      <p>Calculate precise exchange values between cryptocurrencies and traditional currencies</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔍 Advanced Search & Filtering</h3>
+      <p>Find specific cryptocurrencies with powerful search and filtering capabilities</p>
+    </td>
+    <td width="50%">
+      <h3>📱 Responsive Design</h3>
+      <p>Seamless experience on desktop, tablet, and mobile devices</p>
+    </td>
+  </tr>
+</table>
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js with React Router DOM
-- **State Management**: Redux Toolkit for efficient API endpoint handling
-- **APIs**:
-  - CoinGecko API for cryptocurrency data
-  - Gemini API for detailed crypto information and AI chatbot
-  - Various RapidAPI endpoints for additional functionality
-- **UI/UX**: 
-  - Ant Design components
-  - Tailwind CSS for styling
-- **Data Visualization**: Chart.js for interactive and responsive charts
+<table align="center">
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="60px"><br><b>React</b><br><small>UI Library</small></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" width="60px"><br><b>Redux Toolkit</b><br><small>State Management</small></td>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="60px"><br><b>React Router</b><br><small>Navigation</small></td>
+    <td align="center"><img src="https://www.chartjs.org/img/chartjs-logo.svg" width="60px"><br><b>Chart.js</b><br><small>Data Visualization</small></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="60px"><br><b>Tailwind CSS</b><br><small>Styling</small></td>
+    <td align="center"><img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="60px"><br><b>Ant Design</b><br><small>UI Components</small></td>
+    <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Gemini_icon.svg" width="60px"><br><b>Gemini API</b><br><small>AI Assistant</small></td>
+    <td align="center"><img src="https://static.coingecko.com/s/thumbnail-007177f3eca19695592f0b8b0eabbdae282b54154e1be912285c9034ea6cbaf2.png" width="60px"><br><b>CoinGecko API</b><br><small>Crypto Data</small></td>
+  </tr>
+</table>
 
 ## 🚀 Getting Started
 
@@ -39,8 +85,8 @@ A comprehensive cryptocurrency analytics platform built with React, providing de
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/cryptolens.git
-cd cryptolens
+git clone https://github.com/SwastikIIIT/CryptoApp.git
+cd CryptoApp
 ```
 
 2. Install dependencies
@@ -57,7 +103,13 @@ Your app will be running at [http://localhost:3000](http://localhost:3000)
 
 ## 📊 Usage
 
-![Demo Screenshot](/api/placeholder/800/400)
+<div align="center">
+  <h3>Home Page Dashboard</h3>
+  <img src="https://github.com/user-attachments/assets/fbdaf4de-70cf-45ee-814e-558534ee1fc5" alt="Dashboard" width="80%">
+  
+  <h3>Interactive Charts</h3>
+  <img src="https://github.com/user-attachments/assets/a0d07315-ee2d-4781-81e6-c44442c03049" alt="Charts" width="80%">
+</div>
 
 ### Key Features In Action
 
@@ -114,4 +166,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Made with ❤️ by [Your Name]
+<div align="center">
+  Made with ❤️ by Swastik Sharma
+</div>
