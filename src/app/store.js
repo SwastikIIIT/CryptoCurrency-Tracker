@@ -7,7 +7,7 @@ import {cryptoNewsApi} from "../services/cryptoNewsApi";
 
 
 export  const store=configureStore({
-  reducer: {
+  reducer:{
     [cryptoApi.reducerPath]:cryptoApi.reducer,
     [cryptoMainApi.reducerPath]:cryptoMainApi.reducer,
     [geminiApi.reducerPath]:geminiApi.reducer,
@@ -16,5 +16,4 @@ export  const store=configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(cryptoApi.middleware).concat(cryptoMainApi.middleware).concat(geminiApi.middleware).concat(geminiUrlApi.middleware).concat(cryptoNewsApi.middleware),
-
 })

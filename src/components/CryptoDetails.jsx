@@ -160,7 +160,7 @@ const CryptoDetails = () => {
               <Title level={5}>
                 {item.title}
               </Title>
-              <a href={item.url} target='_blank'>{item.dest}</a>
+              <a href={item.url} target='_blank' rel="noreferrer">{item.dest}</a>
             </Row>)
            })}
           

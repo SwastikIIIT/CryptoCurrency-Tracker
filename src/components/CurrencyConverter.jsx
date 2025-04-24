@@ -14,6 +14,7 @@ const CurrencyConverter = () => {
    const [toCurrency,setToCurrency]=useState("");
    const [convertedAmount,setConvertedAmount]=useState("");
    const [isMobile, setIsMobile] = useState(false);
+   
    useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -50,16 +51,6 @@ const CurrencyConverter = () => {
 };
 
 console.log(fromCurrency,toCurrency);
-const handleSwap = () => {
-
-  if (fromCurrency && toCurrency) {
-    const temp = fromCurrency;
-    setFromCurrency(toCurrency);
-    setToCurrency(temp);
-  
-    setConvertedAmount("");
-  }
-};
 // console.log(fromCurrency);
 // console.log(toCurrency);
 
@@ -118,12 +109,6 @@ const handleSwap = () => {
                   />
                 </div>
 
-                <Button
-                  type="default"
-                  icon={<SwapOutlined />}
-                  onClick={handleSwap}
-                  className={`swap-button ${isMobile ? 'mobile' : ''}`}
-                />
 
                 <div className='currency-field'>
                   <Title level={4} style={{ marginBottom: '8px' }}>To</Title>

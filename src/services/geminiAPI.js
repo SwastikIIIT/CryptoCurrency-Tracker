@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 const baseURL = "https://generativelanguage.googleapis.com/v1beta";
 
 export const geminiApi = createApi({

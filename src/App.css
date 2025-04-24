@@ -421,6 +421,7 @@ width: 70%;
 .currency-fields-container {
     display: flex;
     flex-direction: row;
+    gap:10px;
     align-items: center;
     margin-bottom: 24px;
   }
