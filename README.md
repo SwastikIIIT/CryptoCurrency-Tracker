@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔍 CryptoLen
+# 🔍 CryptoLens
 
 ### A comprehensive cryptocurrency analytics platform built with React, providing detailed insights and real-time data for crypto enthusiasts and investors.
 
