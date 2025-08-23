@@ -8,16 +8,17 @@ import Loader from './Loader';
 
 const { Text, Title } = Typography;
 const { Option } = Select;
-const News = ({simplified}) => {
-
-    const count=simplified?6:10;
-  const [newsCategory, setNewsCategory] = useState('cryptocoins');
+const News=({simplified}) => {
+  
+  // console.log("Simplified",simplified);
+  const count=simplified?6:10;
+  const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
   const {data,isLoading,error}=useGetCryptosNewsQuery(newsCategory);
   const {data:mainInfo,isLoading:loading}=useGetMainCryptosQuery();
   const news=data?.data;
 
   const staticOptions = [
-    { value: 'Cryptocurrency', label: 'Cryptocurrency' }, // Static option
+    { value: 'Cryptocurrency', label: 'Cryptocurrency' },
   ];
 
   const dynamicOptions = mainInfo?.map((currency) => ({
@@ -27,10 +28,10 @@ const News = ({simplified}) => {
 
   const options = [...staticOptions, ...(dynamicOptions || [])];
 
-  const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
+  const demoImage = './bitcoin.png';
   // console.log(news);
   // console.log("API Response:", data);
-  // console.log("News Articles:", news);
+  console.log("News Articles:", news);
 
   if(isLoading)return <Loader/>
   return (
@@ -53,26 +54,38 @@ const News = ({simplified}) => {
 
     <Row gutter={[24,24]}>
 
-         {news?.slice(0,count)?.map((item,i)=>{
+         {news?.slice(0,count)?.map((item,index)=>{
              return(
-              <Col xs={24} sm={12} lg={8} key={i}>
-                <Card className='news-card' hoverable>
+              <Col xs={24} sm={12} lg={8} key={index}>
                     <a href={item.url} target='_blank'>
-                        <div className='news-image-container'>
-                          <Title className='news-title' level={5}>{item.title}</Title>
-                          <img style={{"maxWidth":"100px","maxHeight":"80px"}} src={item.thumbnail || demoImage}></img>
-                        </div>
-                        <p className='para'>{item.excerpt.length > 100 ? `${item.excerpt.substring(0, 100)}...` : item.excerpt}</p>
-                     
-                      <div className="provider-container">
-                          <div>
-                            <Avatar src={item?.publisher?.favicon} alt="" />
-                            <Text className="provider-name">{item?.publisher?.name}</Text>
+                      <Card className='news-card' hoverable>
+                              <div className='news-image-container'>
+                                <Title className='news-title' level={5}>{item.title}</Title>
+                                <div >
+                                  <img style={{"height":"100%","maxWidth":"100px","maxHeight":"80px"}} 
+                                     src={item.thumbnail} 
+                                     alt={item?.date}
+                                     onError={(e)=>e.target.src=`/btc.jpg`} 
+                                   />
+                                </div>
+                              </div>
+                              <p className='para'>{item.excerpt.length > 100 ? `${item.excerpt.substring(0, 100)}...` : item.excerpt}</p>
+                          
+                            <div className="provider-container">
+                                <div>
+                                  <Avatar 
+                                    src={<img
+                                      src={item?.publisher?.favicon || "/bitcoin.png"}
+                                      onError={(e) => (e.target.src = "/bitcoin.png")}
+                                      alt={item?.publisher?.name}
+                                    />}
+                                    alt={item?.publisher?.name} />
+                                  <Text className="provider-name">{item?.publisher?.name}</Text>
+                                </div>
+                                <Text>{DateTime.fromISO(item.date).toRelative()}</Text>
                           </div>
-                          <Text>{DateTime.fromISO(item.date).toRelative()}</Text>
-                  </div>
-                </a>
-                </Card>
+                      </Card>
+                   </a>
               </Col>)
          })}
     </Row>

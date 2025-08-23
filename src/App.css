@@ -17,8 +17,15 @@ a:hover{
     color: var(--pink) !important;
 }
 
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
 .app{
     display: flex;
+    flex: 1;
     overflow: hidden;
 }
  
@@ -29,17 +36,19 @@ a:hover{
 
 .main{
     flex: 0.8;
+    /* margin-left: 338px; */
     width: 100%;
-    
 }
 
 .routes{
+    flex:1;
     padding: 20px;
 }
 
 .nav-container{
     position: fixed;
     left: 0;
+    /* width: 338px; */
     /* margin: 10px; */
     height: 100vh;
     margin: 0px;
@@ -297,13 +306,21 @@ a:hover{
     margin: 20px auto 30px auto;
     width: 260px;
 }
-.news-card{
-    min-height: 300px !important;
+
+.card{
+    border: 2px solid red;
 }
+
+.news-card{
+    min-height: 350px !important;
+}
+
 .news-image-container{
     display: flex !important;
+    /* align-items: center !important; */
     justify-content: space-between !important;
 }
+
 .news-title{
 width: 70%;
 }

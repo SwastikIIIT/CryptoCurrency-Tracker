@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { Layout, Typography, Space } from "antd";
@@ -13,26 +12,31 @@ import ChatBot from "./components/Chatbot";
 
 const App = () => {
   return (
-    <div className="app">
-      <div className="navbar">
-        <Navbar />
-      </div>
+    <>
+     <div className="app-wrapper">
+       <div className="app">
+            <div className="navbar">
+              <Navbar />
+            </div>
 
-      <div className="main">
-        <Layout>
-          <div className="routes">
-            <Routes>
-              <Route exact path="/" element={<Homepage />} />
-              <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />}/>
-              <Route exact path="/converter" element={<CurrencyConverter />}/>
-              <Route exact path="/crypto/:coinID" element={<CryptoDetails />} />
-              <Route exact path="/news" element={<News />} />
-            </Routes>
+            <div className="main">
+              <Layout>
+                <div className="routes">
+                  <Routes>
+                    <Route exact path="/" element={<Homepage />} />
+                    <Route exact path="/cryptocurrencies" element={<Cryptocurrencies />}/>
+                    <Route exact path="/converter" element={<CurrencyConverter />}/>
+                    <Route exact path="/crypto/:coinID" element={<CryptoDetails />} />
+                    <Route exact path="/news" element={<News />} />
+                  </Routes>
+                </div>
+              </Layout>
+
+            <ChatBot/>
           </div>
-        </Layout>
+        </div>
 
-       <ChatBot/>
-        <div className="footer">
+        <footer className="footer">
           <Typography.Title level={5} style={{color:"white",textAlign:"center"}}>
            CryptoLens<br/>All rights reserved
            </Typography.Title>
@@ -41,9 +45,9 @@ const App = () => {
                 <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                 <Link to="/news">News</Link>
            </Space>
-        </div>
+        </footer>
       </div>
-    </div>
+      </>
   );
 };
 

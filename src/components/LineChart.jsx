@@ -36,6 +36,7 @@ const xAxis=yAxis==="prices"?`Price of ${coinID} in USD`:yAxis==="market_caps"?`
 
 const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
@@ -68,7 +69,7 @@ const priceHistory={
 
 
   return (
-    <div>
+    <div style={{ width: "100%", minHeight:"500px" }}>
     <Line options={options} data={priceHistory}></Line>
     </div>
   )
