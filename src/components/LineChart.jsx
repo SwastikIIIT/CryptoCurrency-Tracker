@@ -1,5 +1,5 @@
-import React from 'react';
 import {useGetPriceHistoryQuery} from "../services/cryptoMainApi";
+import millify from "millify";
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -10,6 +10,8 @@ import {
     Title,
     Tooltip,
     Legend,
+    scales,
+    Ticks,
   } from 'chart.js';
 import Loader2 from './Loader2';
 
@@ -46,6 +48,16 @@ const options = {
         text: `${coinID.toUpperCase()} ${yAxis==="prices"?"price":yAxis==="market_caps"?"market capital":"total volume"} data over time`,
       },
     },
+    scales: {
+        y: {
+          ticks: {
+            callback: function (value) {
+              // console.log("Tick:",value);
+              return millify(Number(value),{precision:2}); 
+            },
+          },
+        }
+     },
   };
 
 
