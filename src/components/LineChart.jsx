@@ -52,7 +52,6 @@ const options = {
         y: {
           ticks: {
             callback: function (value) {
-              // console.log("Tick:",value);
               return millify(Number(value),{precision:2}); 
             },
           },
