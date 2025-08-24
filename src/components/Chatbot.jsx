@@ -8,7 +8,6 @@ import Message from "../componentBot/Message.jsx";
 import {cryptoDefault} from "../cryptoDefault.js";
 
 const ChatBot = () => {
-
   const [chatHistory,setChatHistory]=useState([
     {
       hideinChat:true,
@@ -36,9 +35,8 @@ const ChatBot = () => {
   }
 
   const botResponse=async(history)=>{
-  
     history=history.map(({role,text})=>({role,parts:[{text}]}));
-     
+    console.log(history);
     const headerData={
       method:'POST',
       headers:{"Content-type":"application/json"},
@@ -74,7 +72,7 @@ const ChatBot = () => {
     <div className={`container ${show===true?"show-chatbot":""}`}>
      <button className="popupBtn" onClick={()=>setShow(!show)}>
      <Avatar
-              style={{ color: "white", backgroundColor: "rgb(36, 36, 112)" }}
+              style={{color:"white",backgroundColor: "rgb(36, 36, 112)" }}
               icon={<WechatWorkOutlined />}
               size={50}/>
       </button>
@@ -87,7 +85,7 @@ const ChatBot = () => {
               icon={<WechatWorkOutlined />}
               size={40}
             />
-            <h2 className="logo-text">Chatbot</h2>
+            <h2 className="logo-text">CryptoLens HelpDesk</h2>
           </div>
            <DownOutlined
            onClick={()=>setShow(!show)}
@@ -100,15 +98,14 @@ const ChatBot = () => {
             <Avatar
               icon={<WechatWorkOutlined />}
               size={40}
-              style={{ color: "white", backgroundColor: "rgb(36, 36, 112)" }}
+              style={{color:"white",backgroundColor:"rgb(36, 36, 112)"}}
             />
-            <p className="message-text">Hey there,how can i help u?</p>
+            <p className="message-text">Hey there,how can I help you?</p>
           </div>
-          
+
           {chatHistory.map((item,i)=>
           <Message key={i} chat={item}/>
           )}
-         
         </div>
         <div className="chat-footer">
             <Form setChatHistory={setChatHistory} botResponse={botResponse} chatHistory={chatHistory}/>

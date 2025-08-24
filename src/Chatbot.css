@@ -55,6 +55,7 @@ body{
 .header-info .logo-text{
     color: white;
     font-size: 1rem;
+    margin-top: 6px;
     font-size: 500;
 }
 

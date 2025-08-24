@@ -5,15 +5,14 @@ import { SendOutlined } from "@ant-design/icons";
 const Form = ({ setChatHistory, botResponse, chatHistory }) => {
   const inputRef = useRef();
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit=(e)=>{
     e.preventDefault();
     const message = inputRef.current.value.trim();
-
     if (message) inputRef.current.value = "";
 
-    setChatHistory((history) => [...history, { role: "user", text: message }]);
+    setChatHistory((history)=>[...history,{role:"user",text:message}]);
 
-    setTimeout(() => {
+    setTimeout(()=>{
       setChatHistory((history) => [
         ...history,
         { role: "model", text: "Thinking..." },
@@ -22,9 +21,10 @@ const Form = ({ setChatHistory, botResponse, chatHistory }) => {
         ...chatHistory,
         {
           role: "user",
-          text: `using the details provided above,please address the query ${message}.Keep your answer short and precise`,
+          text: `Using the details provided above,please address the query ${message}.Keep your answer short and precise`,
         },
       ]);
+      console.log("Bot response",chatHistory);
     }, 600);
   };
 
@@ -35,10 +35,10 @@ const Form = ({ setChatHistory, botResponse, chatHistory }) => {
           ref={inputRef}
           type="text"
           className="message-input"
-          placeholder="Enter the prompt..."
+          placeholder="Ask your query..."
           required
         ></input>
-        <Button className="btn" icon={<SendOutlined />} shape="circle" />
+        <Button className="btn" icon={<SendOutlined/>} shape="circle" />
       </form>
     </>
   );
